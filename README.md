@@ -1,2 +1,2 @@
 # mpiVectorSmoothing
-Vector Smoothing Using MPI
+Vector Smoothing Using msMPI
