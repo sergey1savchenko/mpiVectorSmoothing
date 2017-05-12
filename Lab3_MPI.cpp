@@ -83,7 +83,7 @@ int main(int argc, char**argv){
 		for (int i = 0; i < newSize; ++i) {
 			vector[i] = inputVector[i];
 			result[i] = inputVector[i];
-			tempValues[i] = tempValues[i];
+			tempValues[i] = inputVector[i];
 		}
 
 	}
@@ -99,7 +99,7 @@ int main(int argc, char**argv){
 	MPI_Bcast(tempValues, newSize, MPI_DOUBLE, 0, MPI_COMM_WORLD);
 
 	// Smoothing
-		for (int i = 0; i <= M; i++) {
+		for (int i = 0; i < M; i++) {
 
 			for (int j = 0; j < partSize; ++j) {
 				if (temp_initialVector[j] == 0) {
